@@ -10,6 +10,9 @@ public String changeTimeFormat(String strTime) {
     else if(hours == 12 && min == 0){
         return strTime + ' PM';
     }
+    else if(hours == 0 && min == 0){
+        return '12:00 AM';
+    }
     else {
         return strTime + ' AM';       
     }
