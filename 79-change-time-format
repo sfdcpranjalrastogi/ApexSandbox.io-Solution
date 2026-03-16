@@ -1,13 +1,14 @@
 public String changeTimeFormat(String strTime) {
     Integer hours = Integer.valueOf(strTime.split(':')[0]);
     Integer min = Integer.valueOf(strTime.split(':')[1]);
-    if(hours > 0 && hours < 12 ){
-        return strTime + ' AM';       
-    }
-    else if(hours == 0 && min > 0){
+    if(hours == 0 && min > 0){
         return '12:' + strTime.split(':')[1] +' AM';
     }
     else if(hours > 12){
         return Math.mod(hours,12) + ':' + strTime.split(':')[1] + ' PM';
     }
+    else {
+        return strTime + ' AM';       
+    }
+    
 }
