@@ -1,0 +1,17 @@
+public Integer fibonacci(Integer n) {
+    Integer a = 1;
+    Integer b = 1;
+    Integer c = a;
+    if(n==1 || n==2){
+        return 1;
+    }
+    else{
+        for(integer i = 3 ; i <= n; i++)
+        {
+            c = b;
+            b = a+b;
+            a = c;
+        }
+    }
+    return b;
+}
