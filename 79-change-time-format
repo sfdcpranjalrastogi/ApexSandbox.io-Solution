@@ -5,7 +5,7 @@ public String changeTimeFormat(String strTime) {
         return '12:' + strTime.split(':')[1] +' AM';
     }
     else if(hours > 12){
-        return Math.mod(hours,12) + ':' + strTime.split(':')[1] + ' PM';
+        return String.valueOf(Math.mod(hours,12)).leftPad(2, '0') + ':' + strTime.split(':')[1] + ' PM';
     }
     else if(hours == 12){
         return '12:' + strTime.split(':')[1] + ' PM';
