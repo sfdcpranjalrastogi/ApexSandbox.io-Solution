@@ -1,0 +1,11 @@
+public Boolean isPassed(Boolean passedExam, Boolean passedAssignments, Boolean passedProject) {
+    Integer check = 0;
+    if(passedExam)
+        check++;
+    if(passedAssignments)
+        check++;
+    if(passedProject)
+        check++;
+    
+    return check >=2;
+}
