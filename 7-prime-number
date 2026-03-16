@@ -1,0 +1,20 @@
+public Boolean isPrime(Integer num) {
+    if(num == 2)
+    {
+        return true;
+    }
+    else if(Math.mod(num,2)==0)
+    {
+        return false;
+    }
+    Integer upper = (Integer)Math.floor(Math.sqrt(num));
+    for(Integer i = 2;i<=upper;i++)
+    {
+        if(Math.mod(num,i) == 0)
+        {
+            return false;
+        }
+    }
+
+    return true;
+}
