@@ -1,10 +1,22 @@
 public void createCourseAndClass(String name, String description) {
-    apxio__Course__c course = new apxio__Course__c(Name = name,apxio__Course_Details__c = description);
+        // Step 1: Create and insert Course
+    apxio__Course__c course = new apxio__Course__c(
+        Name = courseName,
+        apxio__Course_Details__c = description
+    );
+    insert course;
     
-    String trimmedDescription = (description != null)
+    // Step 2: Truncate description safely (max 255 chars)
+    String truncatedDesc = (description != null)
         ? description.left(255)
         : null;
-    apxio__Class__c class = new apxio__Class__c(Name = name,apxio__Description__c = trimmedDescription,apxio__Course__c = course.Id);
-    insert course;
-    insert class;
+    
+    // Step 3: Create and insert Class (child)
+    apxio__Class__c classRec = new apxio__Class__c(
+        Name = courseName,
+        apxio__Description__c = truncatedDesc,
+        apxio__Course__c = course.Id
+    );
+    
+    insert classRec;
 }
