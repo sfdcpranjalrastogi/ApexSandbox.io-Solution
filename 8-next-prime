@@ -3,6 +3,7 @@ public Integer nextPrime(Integer num) {
     {
         return 2;
     }
+    else{
     boolean isNonPrime = false;
     Integer numm = num + 1;
     while(isNonPrime){
@@ -14,6 +15,6 @@ public Integer nextPrime(Integer num) {
             }
         }
         numm ++;
-    }
+    }}
     return numm;
 }
