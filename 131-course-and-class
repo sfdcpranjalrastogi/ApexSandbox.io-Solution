@@ -13,7 +13,7 @@ public void createCourseAndClass(String name, String description) {
     
     // Step 3: Create and insert Class (child)
     apxio__Class__c classRec = new apxio__Class__c(
-        Name = courseName,
+        Name = Name,
         apxio__Description__c = truncatedDesc,
         apxio__Course__c = course.Id
     );
