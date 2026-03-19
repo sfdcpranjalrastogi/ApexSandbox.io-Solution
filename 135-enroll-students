@@ -5,13 +5,13 @@ public void enrollStudents(List<String> emails, String className) {
     Integer sizee = stuRecs.size();
     if(stuRecs.size() != 0 && classRec.size() != 0)
     {
-        if(apxio__Student__c stu : stuRecs){
+        for(apxio__Student__c stu : stuRecs){
             EnrollRec.add(new apxio__Class_Enrollment__c(
             apxio__Student__c = stu.Id,
             apxio__Offered_Class__c = classRec[0].Id
-        ))
+        ));
         }
-        
+        Insert EnrollRec;
     }
-    Insert EnrollRec;
+    
 }
