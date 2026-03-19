@@ -1,0 +1,14 @@
+public String reverseWordsInASentence(String sentence){
+    if(String.isBlank(sentence))
+    {
+        return sentence;
+    }
+    List<String> sentenceWords = new List<String>();
+    sentenceWords = sentence.split(' ');
+    integer size = sentenceWords.size();
+    String returnSentence = '';
+    for(Integer i = size - 1; i>=0 ; i--){
+        returnSentence = returnSentence + sentenceWords[i] + ' '; 
+    }
+    return returnSentence.normalizeSpace();
+}
