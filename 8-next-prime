@@ -1,0 +1,19 @@
+public Integer nextPrime(Integer num) {
+    if(num == 1 or num == 0)
+    {
+        return 2;
+    }
+    boolean isNonPrime = false;
+    Integer numm = num + 1;
+    while(isNonPrime){
+        integer upperlimit = (Integer)Math.floor(Math.sqrt(numm)); 
+        for(integer i = 2; i< upperlimit ; i++)
+        {
+            if(Math.mod(numm,i) == 0){
+                isNonPrime = false;
+            }
+        }
+        numm ++;
+    }
+    return numm;
+}
