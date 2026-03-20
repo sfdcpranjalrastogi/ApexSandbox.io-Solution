@@ -22,46 +22,5 @@ public void enrollStudents(List<String> emails, String className) {
             insert EnrollRec;
         }
 
-       /* if (emails == null || emails.isEmpty() || String.isBlank(className)) {
-        return;
-    }
 
-    // Get Students
-    List<apxio__Student__c> stuRecs = [
-        SELECT Id 
-        FROM apxio__Student__c 
-        WHERE apxio__Email__c IN :emails
-    ];
-
-    if (stuRecs.isEmpty()) {
-        return;
-    }
-
-    // Get Class (expecting only one)
-    List<apxio__Class__c> classRec = [
-        SELECT Id 
-        FROM apxio__Class__c 
-        WHERE Name = :className 
-        LIMIT 1
-    ];
-
-    if (classRec.isEmpty()) {
-        return; // or throw exception if required
-    }
-
-    Id classId = classRec[0].Id;
-
-    // Create Enrollment Records
-    List<apxio__Class_Enrollment__c> enrollRec = new List<apxio__Class_Enrollment__c>();
-
-    for (apxio__Student__c stu : stuRecs) {
-        enrollRec.add(new apxio__Class_Enrollment__c(
-            apxio__Student__c = stu.Id,
-            apxio__Offered_Class__c = classId
-        ));
-    }
-
-    if (!enrollRec.isEmpty()) {
-        insert enrollRec;
-    }*/
 }
