@@ -21,6 +21,4 @@ public void enrollStudents(List<String> emails, String className) {
     if(!EnrollRec.isEmpty()){
         insert EnrollRec;
     }
-
-
 }
