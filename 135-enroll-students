@@ -10,7 +10,7 @@ public void enrollStudents(List<String> emails, String className) {
             apxio__Offered_Class__c = classRec[0].Id
             ));
         }
-        insert EnrollRec;
+        update EnrollRec;
     }
     
 }
