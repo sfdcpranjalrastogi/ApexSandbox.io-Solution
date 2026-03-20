@@ -6,7 +6,7 @@ public void enrollStudents(List<String> emails, String className) {
     List<apxio__Student__c> stuRecs = [Select Id from apxio__Student__c where apxio__Email__c IN :emails];
     List<apxio__Class__c> classRec = [Select Id from apxio__Class__c where Name = :className LIMIT 1];
     
-    if(stuRecs.isEmpty() || String.isBlank(classRec))
+    if(stuRecs.isEmpty() || classRec.isEmpty())
     {
         return;
     }
