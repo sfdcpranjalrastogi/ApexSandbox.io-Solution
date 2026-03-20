@@ -2,15 +2,16 @@ public void enrollStudents(List<String> emails, String className) {
     List<apxio__Student__c> stuRecs = [Select Id from apxio__Student__c where apxio__Email__c IN :emails];
     List<apxio__Class__c> classRec = [Select Id from apxio__Class__c where Name = :className];
     List<apxio__Class_Enrollment__c> EnrollRec = new List<apxio__Class_Enrollment__c>;
-    if(stuRecs.size() != 0 && classRec.size() != 0)
-    {
         for(apxio__Student__c stu : stuRecs){
             EnrollRec.add(new apxio__Class_Enrollment__c(
             apxio__Student__c = stu.Id,
             apxio__Offered_Class__c = classRec[0].Id
             ));
         }
-        update EnrollRec;
-    }
+        if(!EnrollRec.isEmpty()){
+            update EnrollRec;
+        }
+        
+    
     
 }
