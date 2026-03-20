@@ -11,11 +11,11 @@ public void enrollStudents(List<String> emails, String className) {
         return;
     }
 
-    List<apxio__Class_Enrollment__c> EnrollRec = new List<apxio__Class_Enrollment__c>;
+    List<apxio__Class_Enrollment__c> EnrollRec = new List<apxio__Class_Enrollment__c>();
         for(apxio__Student__c stu : stuRecs){
             EnrollRec.add(new apxio__Class_Enrollment__c(
             apxio__Student__c = stu.Id,
-            apxio__Offered_Class__c = :classRec[0].Id
+            apxio__Offered_Class__c = classRec[0].Id
             ));
         }
         if(!EnrollRec.isEmpty()){
