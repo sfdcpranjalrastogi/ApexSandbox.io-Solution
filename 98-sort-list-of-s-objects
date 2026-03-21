@@ -1,0 +1,34 @@
+public List<Account> getAccounts(List<Account> accounts) {
+    List<AccountWrapper> wrappers = new List<AccountWrapper>();
+
+    for (Account acc : accounts) {
+        wrappers.add(new AccountWrapper(acc));
+    }
+
+    wrappers.sort();
+
+    List<Account> result = new List<Account>();
+
+    for (AccountWrapper w : wrappers) {
+        result.add(w.acc);
+    }
+
+    return result;
+}
+// write extra class here 
+public class AccountWrapper implement Comparable{
+    public Account acc{get; set;}
+    public AccountWrapper(Account a)
+    {
+        this.acc = a;
+    }
+    public Integer compareTo(Object o) {
+        AccountWrapper other = (AccountWrapper) o;
+        Decimal a = acc?.AnnualRevenue;
+        Decimal b = other?.acc?.AnnualRevenue;
+        if(a == b)
+        {
+            return 0;
+        }
+        return a > b ? -1 : 1;
+}
