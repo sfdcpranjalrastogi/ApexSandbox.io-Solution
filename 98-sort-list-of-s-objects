@@ -17,7 +17,7 @@ public List<Account> getAccounts(List<Account> accounts) {
 }
 // write extra class here 
 public class AccountWrapper implements Comparable{
-    public Account acc;
+    public Account acc{get; set;}
     public AccountWrapper(Account a)
     {
         this.acc = a;
@@ -29,10 +29,7 @@ public class AccountWrapper implements Comparable{
         Decimal a = acc.AnnualRevenue == null ? 0 : acc.AnnualRevenue;
         Decimal b = other.acc.AnnualRevenue == null ? 0 : other.acc.AnnualRevenue;
 
-        if(a == b)
-        {
-            return 0;
-        }
+        if(a == b) return 0;
         return a > b ? -1 : 1;
 }
 // public class AccountWrapper implements Comparable {
