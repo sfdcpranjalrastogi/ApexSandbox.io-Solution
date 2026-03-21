@@ -4,19 +4,14 @@ public List<Account> getAccounts(List<Account> accounts) {
         return null;
     }
     List<AccountWrapper> wrappers = new List<AccountWrapper>();
-
     for (Account acc : accounts) {
         wrappers.add(new AccountWrapper(acc));
     }
-
     wrappers.sort();
-
     List<Account> result = new List<Account>();
-
     for (AccountWrapper w : wrappers) {
         result.add(w.acc);
     }
-
     return result;
 }
 // write extra class here 
