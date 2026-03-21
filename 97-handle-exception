@@ -1,4 +1,10 @@
 public String divide(Integer a, Integer b){
     
-    return b == 0 ? 'Divide by 0' : Math.mod(a/b);
+    try{
+        return (String)Math.mod(a/b);
+    }
+    catch(exception e){
+        return e.message;
+    }
+    
 }
