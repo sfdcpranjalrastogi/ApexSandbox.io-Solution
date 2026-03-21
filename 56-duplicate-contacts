@@ -1,5 +1,5 @@
 public Boolean duplicateContacts(Contact c1, Contact c2) {
-    if(c1 != null || c2 != null)
+    if(c1 == null || c2 == null)
     {
         return false;
     }
