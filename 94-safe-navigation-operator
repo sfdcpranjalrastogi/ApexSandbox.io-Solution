@@ -1,5 +1,5 @@
 public String getAccountBillingCityWithSafeNavigation(List<Account> accounts){
    if(accounts.size() > 0){
-       return accounts[0].BillingCity != null ? accounts[0].BillingCity : null;
+       return accounts[0].BillingCity != null ? accounts[0].BillingCity.toUpperCase() : null;
    }
 }
