@@ -1,6 +1,6 @@
 public void validateInsert(List<Opportunity> opportunities){
     for(Opportunity Opp : opportunities){
-        if(Opp.StageName == 'Closed Won' && (Opp.Description == '' || Opp.Description == null))
+        if(Opp.StageName == 'Closed Won' && String.isBlank(opp.Description))
         {
             Opp.Description.addError('Description should not be empty for Closed Won opportunity.');
         }
