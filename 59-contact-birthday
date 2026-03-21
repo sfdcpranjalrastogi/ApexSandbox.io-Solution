@@ -4,5 +4,5 @@ public Boolean isBirthday(Contact c) {
     Integer dayy = c?.Birthdate.day();
     Integer monthh = c?.Birthdate.month();
 
-    return (todayDay == day && todayMonth == monthh);
+    return (todayDay == dayy && todayMonth == monthh);
 }
