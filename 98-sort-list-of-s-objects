@@ -17,7 +17,7 @@ public List<Account> getAccounts(List<Account> accounts) {
 }
 // write extra class here 
 public class AccountWrapper implements Comparable{
-    public Account acc{get; set;}
+    public Account acc;
     public AccountWrapper(Account a)
     {
         this.acc = a;
