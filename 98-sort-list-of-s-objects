@@ -1,4 +1,8 @@
 public List<Account> getAccounts(List<Account> accounts) {
+    if(accounts != null)
+    {
+        return null;
+    }
     List<AccountWrapper> wrappers = new List<AccountWrapper>();
 
     for (Account acc : accounts) {
