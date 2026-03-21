@@ -24,8 +24,11 @@ public class AccountWrapper implements Comparable{
     }
     public Integer compareTo(Object o) {
         AccountWrapper other = (AccountWrapper) o;
-        Decimal a = acc?.AnnualRevenue;
-        Decimal b = other?.acc?.AnnualRevenue;
+        // Decimal a = acc?.AnnualRevenue;
+        // Decimal b = other?.acc?.AnnualRevenue;
+        Decimal a = acc.AnnualRevenue == null ? 0 : acc.AnnualRevenue;
+        Decimal b = other.acc.AnnualRevenue == null ? 0 : other.acc.AnnualRevenue;
+
         if(a == b)
         {
             return 0;
@@ -42,8 +45,8 @@ public class AccountWrapper implements Comparable{
 //     public Integer compareTo(Object o) {
 //         AccountWrapper other = (AccountWrapper) o;
 
-//         Decimal a = acc.AnnualRevenue == null ? 0 : acc.AnnualRevenue;
-//         Decimal b = other.acc.AnnualRevenue == null ? 0 : other.acc.AnnualRevenue;
+        // Decimal a = acc.AnnualRevenue == null ? 0 : acc.AnnualRevenue;
+        // Decimal b = other.acc.AnnualRevenue == null ? 0 : other.acc.AnnualRevenue;
 
 //         // Descending order
 //         if (a == b) return 0;
