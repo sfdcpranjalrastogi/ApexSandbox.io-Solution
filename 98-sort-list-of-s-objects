@@ -16,21 +16,37 @@ public List<Account> getAccounts(List<Account> accounts) {
     return result;
 }
 // write extra class here 
-public class AccountWrapper implements Comparable {
-    public Account acc;
-
-    public AccountWrapper(Account a) {
+public class AccountWrapper implements Comparable{
+    public Account acc{get; set;}
+    public AccountWrapper(Account a)
+    {
         this.acc = a;
     }
-
     public Integer compareTo(Object o) {
         AccountWrapper other = (AccountWrapper) o;
-
-        Decimal a = acc.AnnualRevenue == null ? 0 : acc.AnnualRevenue;
-        Decimal b = other.acc.AnnualRevenue == null ? 0 : other.acc.AnnualRevenue;
-
-        // Descending order
-        if (a == b) return 0;
+        Decimal a = acc?.AnnualRevenue;
+        Decimal b = other?.acc?.AnnualRevenue;
+        if(a == b)
+        {
+            return 0;
+        }
         return a > b ? -1 : 1;
-    }
 }
+// public class AccountWrapper implements Comparable {
+//     public Account acc;
+
+//     public AccountWrapper(Account a) {
+//         this.acc = a;
+//     }
+
+//     public Integer compareTo(Object o) {
+//         AccountWrapper other = (AccountWrapper) o;
+
+//         Decimal a = acc.AnnualRevenue == null ? 0 : acc.AnnualRevenue;
+//         Decimal b = other.acc.AnnualRevenue == null ? 0 : other.acc.AnnualRevenue;
+
+//         // Descending order
+//         if (a == b) return 0;
+//         return a > b ? -1 : 1;
+//     }
+// }
