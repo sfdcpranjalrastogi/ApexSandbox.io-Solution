@@ -12,5 +12,6 @@ public Integer findTargetCount(List<Integer> nums, Integer target) {
                 count++ ;
             }
         }
+        return count;
     }
 }
