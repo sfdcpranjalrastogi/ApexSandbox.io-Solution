@@ -1,0 +1,16 @@
+public Integer findTargetCount(List<Integer> nums, Integer target) {
+    if(nums == null || nums.size() == 0 || target == null)
+    {
+        return 0;
+    }
+    else{
+        Integer count = 0;
+        for(Integer i = 0; i< nums.size();i++)
+        {
+            if(nums[i] == target)
+            {
+                count++ ;
+            }
+        }
+    }
+}
