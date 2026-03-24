@@ -1,0 +1,16 @@
+public static Integer arraySum(List<Integer> numbers) {
+    if(numbers == null || numbers.size() == 0)
+    {
+        return 0;
+    }
+    else{
+        Integer sizee = numbers.size();
+        Integer summ = 0; 
+        for(Integer i = 0; i < sizee; i++)
+        {
+            summ = summ + numbers[i];
+        }
+        return summ;
+    }
+    
+}
