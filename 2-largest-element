@@ -1,11 +1,11 @@
 public static Integer findLargest(List<Integer> nums) {
-	Integer minn = nums[0];
+	Integer maxx = nums[0];
     for(Integer i = 0 ; i < nums.size() ; i++)
     {
-        if(minn > nums[i] )
+        if(maxx < nums[i])
         {
-            minn = nums[i];
+            maxx = nums[i];
         }
     }
-    return minn;
+    return maxx;
 }
