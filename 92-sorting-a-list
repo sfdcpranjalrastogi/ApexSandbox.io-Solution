@@ -4,7 +4,7 @@ public List<String> getNamesInAscOrder(List<String> accountNames)
         return new List<String>();
     }
 
-    fullNames.sort(); // standard library method (ascending)
+    fullNames.sort();
 
     return fullNames;
 }
