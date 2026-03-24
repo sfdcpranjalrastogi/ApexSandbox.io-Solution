@@ -1,5 +1,10 @@
 public List<String> getNamesInAscOrder(List<String> accountNames)
 {
-    List<String> copiedList = new List<String>(accountNames);
-    return copiedList.sort();
+    if (fullNames == null) {
+        return new List<String>();
+    }
+
+    fullNames.sort(); // standard library method (ascending)
+
+    return fullNames;
 }
