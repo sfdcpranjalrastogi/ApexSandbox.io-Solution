@@ -1,27 +1,19 @@
 public List<Integer> positiveIntegers(List<Integer> numbers) {
+    
     if(numbers == null || numbers.size() == 0)
     {
         return numbers;
     }
     else 
     {
-        List<Integer> indexs = new List<Integer>();
-        for(Integer i = 0; i < numbers.size(); i++)
+        List<Integer> cloneNum = numbers.clone();
+        for(Integer i = numbers.size() - 1; i > 0; i--)
         {
             if(numbers[i] <= 0)
             {
-                indexs.add(i);
+                cloneNum.remove(i);
             }
         }
-        if(indexs.size() == 0)
-        {
-            return numbers;
-        }
-        for(Integer i = indexs.size() - 1; i >= 0; i--)
-        {
-            numbers.remove(i);
-        }
-
-        return numbers;
+        return cloneNum;
     }
 }
