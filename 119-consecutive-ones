@@ -1,0 +1,24 @@
+public Integer maxConsecutiveOnes(Integer[] numbers) {
+    Integer count = 0;
+    Integer maxx = 0;
+    if(numbers == null || numbers.size() == 0)
+    {
+        return maxx;
+    }
+    else
+    {
+        for(Integer i = 0; i < numbers.size(); i++)
+        {
+            if(numbers[i]){
+                count ++;
+            }
+            else{
+                if( maxx < count ){
+                    maxx = count;
+                }
+                count = 0 ;
+            }
+        }
+        return maxx;
+    }
+}
