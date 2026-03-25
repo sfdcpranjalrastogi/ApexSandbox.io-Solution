@@ -19,6 +19,10 @@ public Integer maxConsecutiveOnes(Integer[] numbers) {
                 count = 0 ;
             }
         }
+        if(maxx < count)
+        {
+            maxx = count;
+        }
         return maxx;
     }
 }
