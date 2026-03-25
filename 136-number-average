@@ -1,0 +1,17 @@
+public Decimal average(List<Decimal> numbers){
+    Decimal sum = 0.0;
+    Integer sizee = numbers.size();
+    if(numbers == null || sizee == 0)
+    {
+        return 0.00;
+    }
+    else{
+        for(Integer i=0; i<numbers.size(); i++)
+        {
+            sum  += numbers[i];
+        }
+
+        return (sum/sizee).setscale(2);
+    }
+
+}
