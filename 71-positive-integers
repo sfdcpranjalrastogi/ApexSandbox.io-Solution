@@ -4,16 +4,30 @@ public List<Integer> positiveIntegers(List<Integer> numbers) {
     {
         return numbers;
     }
-    else 
+    else
     {
-        List<Integer> cloneNum = numbers.clone();
-        for(Integer i = numbers.size() - 1; i >= 0; i--)
+        List<Integer> cloneNum = new List<Integer>();
+        for(Integer i = 0; i < numbers.size(); i++)
         {
-            if(numbers[i] <= 0)
+            if(numbers[i] > 0)
             {
-                cloneNum.remove(i);
+                cloneNum.add(numbers[i]);
             }
         }
         return cloneNum;
     }
+
+    //alternate approch
+    // else 
+    // {
+    //     List<Integer> cloneNum = numbers.clone();
+    //     for(Integer i = numbers.size() - 1; i >= 0; i--)
+    //     {
+    //         if(numbers[i] <= 0)
+    //         {
+    //             cloneNum.remove(i);
+    //         }
+    //     }
+    //     return cloneNum;
+    // }
 }
