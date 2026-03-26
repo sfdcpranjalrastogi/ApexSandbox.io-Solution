@@ -1,0 +1,29 @@
+public Boolean companionPlants(List<String> plants) {
+    if(plants.size() <= 1 || plants == null)
+    {
+        return false;
+    }
+    else{
+        for(Integer i = 0; i < plants.size()-1; i++)
+        {
+            if(!companionCheck(plants[i],plants[i+1])){
+                return false;
+            }
+        }
+        return true;
+    }
+}
+public boolean companionCheck(String plant1, String plant2){
+    List<String> companionPairs = new List<String>{
+        'lettuce-cucumbers',
+        'cucumbers-lettuce',
+        'lettuce-onions',
+        'onions-lettuce',
+        'carrots-onions',
+        'onions-carrots',
+        'tomatoes-onions',
+        'onions-tomatoes'
+    }
+    String pair = plant1 + ' ' + plant2; 
+    return companionPairs.contains(pair);
+}
