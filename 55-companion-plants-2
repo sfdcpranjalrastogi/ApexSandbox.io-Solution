@@ -14,7 +14,7 @@ public Boolean companionPlants(List<String> plants) {
         return true;
     }
 }
-public boolean companionCheck(String plant1, String plant2){
+private boolean companionCheck(String plant1, String plant2){
     List<String> companionPairs = new List<String>{
         'lettuce-cucumbers',
         'cucumbers-lettuce',
