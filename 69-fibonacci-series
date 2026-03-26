@@ -1,0 +1,25 @@
+public List<Integer> fibonacciSeries(Integer n) {
+    List<Integer> series = new List<String>();
+    if(n == 0)
+    {
+        return series;
+    }
+    series.add(1);
+    if(n == 1)
+    {
+        return series;
+    }
+    series.add(1);
+    if(n == 2)
+    {
+        return series;
+    }
+    else{
+        Integer n1 = 2;
+        while(n1 < n){
+            series.add(series[n1-1] + series[n1-2]);
+            n1++;
+        }
+        return series;
+    }
+}
