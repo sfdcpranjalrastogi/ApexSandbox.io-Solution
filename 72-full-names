@@ -8,9 +8,9 @@ public List<String> fullNames(List<String> firstNames, List<String> lastNames) {
     else{
         for(Integer i = 0; i < firstNames.size(); i++)
         {
-            fullName.add(firstNames[i] + ' ' + lastNames[i]);
+            fullNameList.add(firstNames[i] + ' ' + lastNames[i]);
         }
-        return fullName;
+        return fullNameList;
     }
 
 
