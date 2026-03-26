@@ -6,7 +6,7 @@ public Boolean companionPlants(List<String> plants) {
     else{
         for(Integer i = 0; i < plants.size()-1; i++)
         {
-            boolean result = this.companionCheck(plants[i],plants[i+1]);
+            boolean result = companionCheck(plants[i],plants[i+1]);
             if(!result){
                 return false;
             }
@@ -14,7 +14,7 @@ public Boolean companionPlants(List<String> plants) {
         return true;
     }
 }
-private boolean companionCheck(String plant1, String plant2){
+public boolean companionCheck(String plant1, String plant2){
     List<String> companionPairs = new List<String>{
         'lettuce-cucumbers',
         'cucumbers-lettuce',
