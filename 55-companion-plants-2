@@ -25,6 +25,6 @@ private boolean companionCheck(String plant1, String plant2){
         'tomatoes-onions',
         'onions-tomatoes'
     };
-    String pair = plant1 + ' ' + plant2; 
+    String pair = plant1 + '-' + plant2; 
     return companionPairs.contains(pair);
 }
