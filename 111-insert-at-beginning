@@ -1,13 +1,18 @@
 public void insertAtStart(String cityName, List<String> cities) {
-    if(cityName != null)
-    {
-        cities.add('dummy');
-        Integer i = cities.size()-1;
-        while(i >= 0)
-        {
-            cities[i+1] = cities[i];
-            i--;
-        }
-        cities[i] = cityName;
+    // if(cityName != null)
+    // {
+    //     cities.add('dummy');
+    //     Integer i = cities.size()-1;
+    //     while(i >= 0)
+    //     {
+    //         cities[i+1] = cities[i];
+    //         i--;
+    //     }
+    //     cities[i] = cityName;
+    // }
+    if (cities == null) {
+        return;
     }
+
+    cities.add(0, cityName);
 }
