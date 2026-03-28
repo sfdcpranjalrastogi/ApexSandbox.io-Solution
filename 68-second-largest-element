@@ -4,6 +4,7 @@ public Integer secondLargest(List<Integer> numbers) {
     for(Integer i = 0; i < numbers.size(); i++)
     {
         if(numbers[i] > num){
+            secLargest = num;
             num = numbers[i];
         }
         else if(numbers[i] < num && numbers[i] > secLargest)
