@@ -15,6 +15,9 @@ public boolean isSorted(List<Integer> numbers) {
             else if(numbers[i] < numbers[i+1]){
                 ascending = true;
             }
+            else{
+                equals = true;
+            }
         }
 
         if(ascending == true && decending == true)
