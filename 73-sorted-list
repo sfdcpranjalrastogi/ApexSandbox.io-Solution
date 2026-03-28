@@ -1,0 +1,30 @@
+public boolean isSorted(List<Integer> numbers) {
+    if(numbers == null || numbers.size() < 3)
+    {
+        return true;
+    }
+    else{
+        boolean ascending = false;
+        boolean decending = false;
+        boolean equals = false;
+        for(Integer i = 0; i < numbers.size()-1; i++)
+        {
+            if(numbers[i] > numbers[i+1]){
+                decending = true;
+            }
+            else if(numbers[i] < numbers[i+1]){
+                ascending = true;
+            }
+        }
+
+        if(ascending == true && decending == true)
+        {
+            return false;
+        }
+        else if((ascending == false && decending == false && equals == true) || (ascending != decending) )
+        {
+            return true;
+        }
+    }
+    return false;
+}
