@@ -1,0 +1,29 @@
+public static List<Contact> ContactDeduplicator(List<Contact> contacts) {
+        if (contacts == null) {
+            return result;
+        }
+
+        Set<String> seenEmails = new Set<String>();
+
+        for (Contact c : contacts) {
+            
+            // Normalize email
+            String emailKey;
+            
+            if (String.isBlank(c.Email)) {
+                emailKey = 'BLANK'; // treat null/'' same
+            } else {
+                emailKey = c.Email.trim().toLowerCase();
+            }
+
+            // Add only first occurrence
+            if (!seenEmails.contains(emailKey)) {
+                seenEmails.add(emailKey);
+                result.add(c);
+            }
+        }
+
+        return result;
+        }
+    
+    
