@@ -7,7 +7,11 @@ public List<String> orgNames(List<String> adjectives, List<String> animals) {
     else{
         for(Integer i = 0;i < adjectives.size(); i++)
         {
-            orgName.add(adjectives[i]+ '-' + animals[i]);
+            for(Integer j = 0 ; j < animals.size(); j++)
+            {
+                orgName.add(adjectives[i]+ '-' + animals[j]);
+            }
+            
         }
         return orgName;
     }
