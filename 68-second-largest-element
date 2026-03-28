@@ -1,0 +1,19 @@
+public Integer secondLargest(List<Integer> numbers) {
+    Integer num = -2147483647 - 1;
+    Integer secLargest = -2147483647 - 1;
+    for(Integer i = 0; i < numbers.size(); i++)
+    {
+        if(numbers[i] > num){
+            num = numbers[i];
+        }
+    }
+
+    for(Integer i = 0; i < numbers.size();i++)
+    {
+        if(numbers[i] > secLargest && numbers[i] != num)
+        {
+            secLargest = numbers[i];
+        }
+    }
+    return secLargest;
+}
