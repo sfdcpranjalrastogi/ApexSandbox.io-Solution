@@ -8,10 +8,10 @@ public Map<String, List<Case>> casesByType(List<Case> cases) {
     {
         if(c.Type != null)
         {
-            if(! TypeCaseMap.containsKey(c.Type)){
-                TypeCaseMap.put(c.Type,new List<Case>());
+            if(!TypeCasesMap.containsKey(c.Type)){
+                TypeCasesMap.put(c.Type,new List<Case>());
             }
-            TypeCaseMap.get(c.Type).add(c));
+            TypeCasesMap.get(c.Type).add(c));
         }
     }
     return TypeCasesMap;
