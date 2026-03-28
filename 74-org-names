@@ -1,0 +1,14 @@
+public List<String> orgNames(List<String> adjectives, List<String> animals) {
+    List<String> orgName = new List<String>();
+    if(adjectives == null || animals == null || adjectives.size() == 0 || animals.size() == 0)
+    {
+        return orgName;
+    }
+    else{
+        for(Integer i = 0;i < adjectives.size(); i++)
+        {
+            orgName.add(adjectives[i]+ '-' + animals[i]);
+        }
+        return orgName;
+    }
+}
