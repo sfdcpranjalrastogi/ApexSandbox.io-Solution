@@ -13,7 +13,7 @@ public class Stack {
            return stackList.remove(size-1);
         }
         else{
-            return new Object;
+            return null;
         }
     }
     
