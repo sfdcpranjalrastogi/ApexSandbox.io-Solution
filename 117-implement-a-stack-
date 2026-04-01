@@ -1,6 +1,6 @@
 public class Stack {
     
-    List<Object> stackList = new List<Object>();
+    private List<Object> stackList = new List<Object>();
     public void push(Object obj) {
         //implement push
         stackList.add(obj);
