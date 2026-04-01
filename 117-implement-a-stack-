@@ -22,7 +22,7 @@ public class Stack {
     }
     
     public Object peek(){
-        return stackList.get(stackList.size());
+        return stackList.get(stackList.size()-1);
     }
     
     public Boolean isEmpty() {
