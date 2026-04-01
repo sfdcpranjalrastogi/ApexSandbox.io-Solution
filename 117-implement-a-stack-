@@ -10,7 +10,7 @@ public class Stack {
         Integer size = stackList.size();
         if(size != 0)
         {
-           return stackList.remove(size);
+           return stackList.remove(size-1);
         }
         else{
             return new Object;
