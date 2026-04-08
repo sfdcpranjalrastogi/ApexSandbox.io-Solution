@@ -1,0 +1,23 @@
+public Boolean isPalindrome(String str){
+
+    if(str.length() < 2)
+    {
+        return true;
+    }
+    String cleanString = str.toLowerCase().replaceAll('[^a-zA-Z0-9]', '');
+
+    if(cleanString.length() < 2)
+    {
+        return true;    
+    }
+    Integer halfLength = Math.floor(cleanString.length()/2);
+    Integer fullLength = cleanString.length();
+    for(Integer i = 0 ; i < cleanString.length()/2;i++)
+    {
+        if(cleanString.substring(i,i+1) != cleanString.substring(fullLength -i-2,fullLength -i-1))
+        {
+            return false;
+        }
+    }
+    return true;
+}
