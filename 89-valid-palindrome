@@ -10,7 +10,7 @@ public Boolean isPalindrome(String str){
     {
         return true;    
     }
-    Integer halfLength = Math.floor(cleanString.length()/2);
+    Integer halfLength = (Integer)Math.floor(cleanString.length()/2);
     Integer fullLength = cleanString.length();
     for(Integer i = 0 ; i < cleanString.length()/2;i++)
     {
