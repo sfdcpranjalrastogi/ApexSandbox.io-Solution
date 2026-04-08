@@ -5,7 +5,6 @@ public Boolean isPalindrome(String str){
         return true;
     }
     String cleanString = str.toLowerCase().replaceAll('[^a-zA-Z0-9]', '');
-    system.debug(cleanString);
 
     if(cleanString.length() < 2)
     {
@@ -15,7 +14,7 @@ public Boolean isPalindrome(String str){
     Integer fullLength = cleanString.length();
     for(Integer i = 0 ; i < cleanString.length()/2;i++)
     {
-        if(cleanString.substring(i,i+1) != cleanString.substring(fullLength -i-2,fullLength -i-1))
+        if(cleanString.substring(i,i+1) != cleanString.substring(fullLength -i-1,fullLength -i))
         {
             return false;
         }
