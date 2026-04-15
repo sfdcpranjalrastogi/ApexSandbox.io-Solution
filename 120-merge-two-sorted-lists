@@ -2,7 +2,7 @@ public static List<Integer> mergeLists(List<Integer> list1, List<Integer> list2)
     List<Integer> sortedList = new List<Integer>();
     Integer itr1 = 0;
     Integer itr2 = 0;
-    do {
+    while(itr1 < list1.size() && itr2 < list2.size()){
         if(list1[itr1] < list2[itr2])
         {
             sortedList.add(list1[itr1]);
@@ -12,7 +12,7 @@ public static List<Integer> mergeLists(List<Integer> list1, List<Integer> list2)
             sortedList.add(list2[itr2]);
             itr2++;
         }
-    }while(itr1 < list1.size() && itr2 < list2.size())
+    }
 
     if(itr1 == list1.size())
     {
